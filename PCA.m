@@ -12,7 +12,7 @@ A2 = reshape(A(2,:),16,16);
 imshow(A2')
 
 % Apply PCA
-coeff = pca(A);
+coeff = pca(A'A);
 
 % Reconstucted data 1: 10 pc
 new1 = A * coeff(:,1:10) * coeff(:,1:10)';
